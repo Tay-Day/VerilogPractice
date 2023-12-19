@@ -1,0 +1,357 @@
+$date
+	Mon Dec 18 11:14:20 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_nBitAdder $end
+$var wire 8 ! answer [7:0] $end
+$var reg 8 " i1 [7:0] $end
+$var reg 8 # i2 [7:0] $end
+$scope module uut $end
+$var wire 8 $ input1 [7:0] $end
+$var wire 8 % input2 [7:0] $end
+$var wire 1 & carry_out $end
+$var wire 8 ' carry [7:0] $end
+$var wire 8 ( answer [7:0] $end
+$var parameter 32 ) N $end
+$scope begin genblk1[0] $end
+$var parameter 2 * i $end
+$scope begin genblk1 $end
+$scope module ha $end
+$var wire 1 + bit1 $end
+$var wire 1 , bit2 $end
+$var wire 1 - carry $end
+$var wire 1 . sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[1] $end
+$var parameter 2 / i $end
+$scope begin genblk1 $end
+$scope module fa $end
+$var wire 1 0 a $end
+$var wire 1 1 b $end
+$var wire 1 2 cin $end
+$var wire 1 3 cout $end
+$var wire 1 4 sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[2] $end
+$var parameter 3 5 i $end
+$scope begin genblk1 $end
+$scope module fa $end
+$var wire 1 6 a $end
+$var wire 1 7 b $end
+$var wire 1 8 cin $end
+$var wire 1 9 cout $end
+$var wire 1 : sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[3] $end
+$var parameter 3 ; i $end
+$scope begin genblk1 $end
+$scope module fa $end
+$var wire 1 < a $end
+$var wire 1 = b $end
+$var wire 1 > cin $end
+$var wire 1 ? cout $end
+$var wire 1 @ sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[4] $end
+$var parameter 4 A i $end
+$scope begin genblk1 $end
+$scope module fa $end
+$var wire 1 B a $end
+$var wire 1 C b $end
+$var wire 1 D cin $end
+$var wire 1 E cout $end
+$var wire 1 F sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[5] $end
+$var parameter 4 G i $end
+$scope begin genblk1 $end
+$scope module fa $end
+$var wire 1 H a $end
+$var wire 1 I b $end
+$var wire 1 J cin $end
+$var wire 1 K cout $end
+$var wire 1 L sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[6] $end
+$var parameter 4 M i $end
+$scope begin genblk1 $end
+$scope module fa $end
+$var wire 1 N a $end
+$var wire 1 O b $end
+$var wire 1 P cin $end
+$var wire 1 Q cout $end
+$var wire 1 R sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[7] $end
+$var parameter 4 S i $end
+$scope begin genblk1 $end
+$scope module fa $end
+$var wire 1 T a $end
+$var wire 1 U b $end
+$var wire 1 V cin $end
+$var wire 1 W cout $end
+$var wire 1 X sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b111 S
+b110 M
+b101 G
+b100 A
+b11 ;
+b10 5
+b1 /
+b0 *
+b1000 )
+$end
+#0
+$dumpvars
+1X
+0W
+0V
+0U
+1T
+1R
+0Q
+0P
+0O
+1N
+1L
+0K
+0J
+0I
+1H
+1F
+0E
+1D
+0C
+0B
+0@
+1?
+1>
+1=
+0<
+0:
+19
+18
+07
+16
+04
+13
+02
+11
+10
+0.
+0-
+0,
+0+
+b11110000 (
+b1110 '
+0&
+b1010 %
+b11100110 $
+b1010 #
+b11100110 "
+b11110000 !
+$end
+#100
+0F
+0D
+0>
+0?
+08
+09
+0@
+b0 '
+03
+0:
+0L
+0R
+0X
+b1 !
+b1 (
+1.
+1,
+01
+0=
+00
+06
+0H
+0N
+0T
+b1 #
+b1 %
+b0 "
+b0 $
+#200
+1:
+18
+13
+1@
+1F
+1L
+1R
+1X
+1>
+1D
+1J
+1P
+1V
+1&
+12
+04
+19
+1?
+1E
+1K
+1Q
+1W
+b11111100 !
+b11111100 (
+0.
+b11111111 '
+1-
+17
+1=
+1C
+1I
+1O
+1U
+1+
+10
+16
+1<
+1B
+1H
+1N
+1T
+b11111101 #
+b11111101 %
+b11111111 "
+b11111111 $
+#300
+0F
+0D
+0?
+0>
+0R
+09
+0P
+0K
+08
+03
+0J
+1:
+1L
+02
+04
+1@
+0E
+b101100 !
+b101100 (
+0X
+b11000000 '
+0-
+0,
+07
+0C
+0I
+0+
+00
+0<
+0B
+0T
+b11001000 #
+b11001000 %
+b1100100 "
+b1100100 $
+#400
+1J
+1E
+1D
+1?
+0@
+0&
+1>
+0W
+18
+0V
+1:
+19
+0X
+13
+0F
+1L
+b1100100 !
+b1100100 (
+1R
+b11110 '
+0Q
+11
+17
+0=
+0U
+10
+1<
+1B
+0H
+0N
+b1000110 #
+b1000110 %
+b11110 "
+b11110 $
+#500
+0L
+0:
+0D
+0J
+08
+0>
+0?
+0E
+14
+03
+0R
+b0 '
+09
+0@
+0F
+b11 !
+b11 (
+1.
+1,
+01
+07
+0O
+06
+0<
+0B
+b1 #
+b1 %
+b10 "
+b10 $
+#600

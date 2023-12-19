@@ -1,0 +1,37 @@
+$date
+	Tue Dec 19 14:42:00 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module twoToOne_tb $end
+$var wire 1 ! answer $end
+$var reg 1 " d0 $end
+$var reg 1 # d1 $end
+$var reg 1 $ s $end
+$scope module uut $end
+$var wire 1 " d0 $end
+$var wire 1 # d1 $end
+$var wire 1 $ s $end
+$var wire 1 ! answer $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+1"
+1!
+$end
+#20
+1#
+0"
+1$
+#40

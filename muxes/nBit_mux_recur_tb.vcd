@@ -1,0 +1,186 @@
+$date
+	Tue Dec 19 15:35:51 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module nBit_mux_recur_tb $end
+$var wire 1 ! answer $end
+$var reg 4 " inputs [3:0] $end
+$var reg 2 # selectbits [1:0] $end
+$scope module uut $end
+$var wire 4 $ inputs [3:0] $end
+$var wire 2 % selectbits [1:0] $end
+$var wire 1 ! answer $end
+$var parameter 32 & N $end
+$scope function clog2 $end
+$var integer 32 ' temp [31:0] $end
+$var integer 32 ( value [31:0] $end
+$upscope $end
+$scope begin genblk1 $end
+$var wire 1 ) rightOutput $end
+$var wire 1 * leftOutput $end
+$scope module internMux $end
+$var wire 1 + s $end
+$var wire 1 * d1 $end
+$var wire 1 ) d0 $end
+$var wire 1 ! answer $end
+$upscope $end
+$scope module muxLeft $end
+$var wire 2 , inputs [1:0] $end
+$var wire 1 - selectbits $end
+$var wire 1 * answer $end
+$var parameter 32 . N $end
+$scope function clog2 $end
+$var integer 32 / temp [31:0] $end
+$var integer 32 0 value [31:0] $end
+$upscope $end
+$scope begin genblk1 $end
+$scope module baseMux $end
+$var wire 1 1 d0 $end
+$var wire 1 2 d1 $end
+$var wire 1 - s $end
+$var wire 1 * answer $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module muxRight $end
+$var wire 2 3 inputs [1:0] $end
+$var wire 1 4 selectbits $end
+$var wire 1 ) answer $end
+$var parameter 32 5 N $end
+$scope function clog2 $end
+$var integer 32 6 temp [31:0] $end
+$var integer 32 7 value [31:0] $end
+$upscope $end
+$scope begin genblk1 $end
+$scope module baseMux $end
+$var wire 1 8 d0 $end
+$var wire 1 9 d1 $end
+$var wire 1 4 s $end
+$var wire 1 ) answer $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 5
+b10 .
+b100 &
+$end
+#0
+$dumpvars
+09
+08
+bx 7
+bx 6
+14
+b0 3
+12
+01
+bx 0
+bx /
+1-
+b10 ,
+1+
+1*
+0)
+bx (
+bx '
+b11 %
+b1000 $
+b11 #
+b1000 "
+1!
+$end
+#20
+11
+02
+0-
+04
+b1 ,
+b10 #
+b10 %
+b100 "
+b100 $
+#40
+0*
+1)
+1!
+01
+19
+1-
+14
+0+
+b0 ,
+b10 3
+b1 #
+b1 %
+b10 "
+b10 $
+#60
+18
+09
+0-
+04
+b1 3
+b0 #
+b0 %
+b1 "
+b1 $
+#80
+0!
+11
+19
+1-
+14
+1+
+b1 ,
+b11 3
+b11 #
+b11 %
+b111 "
+b111 $
+#100
+01
+12
+0-
+04
+b10 ,
+b10 #
+b10 %
+b1011 "
+b1011 $
+#120
+1*
+0)
+0!
+11
+09
+1-
+14
+0+
+b11 ,
+b1 3
+b1 #
+b1 %
+b1101 "
+b1101 $
+#140
+08
+19
+0-
+04
+b10 3
+b0 #
+b0 %
+b1110 "
+b1110 $
+#160

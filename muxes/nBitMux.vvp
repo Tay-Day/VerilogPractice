@@ -1,0 +1,227 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\PROGRA~4\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\PROGRA~4\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\PROGRA~4\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\PROGRA~4\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\PROGRA~4\iverilog\lib\ivl\va_math.vpi";
+S_000001cce9fffdd0 .scope module, "nBit_mux_recur_tb" "nBit_mux_recur_tb" 2 3;
+ .timescale 0 0;
+v000001ccea066930_0 .net "answer", 0 0, L_000001ccea067b50;  1 drivers
+v000001ccea066610_0 .var "inputs", 3 0;
+v000001ccea0675b0_0 .var "selectbits", 1 0;
+S_000001ccea0099c0 .scope module, "uut" "nBit_Mux" 2 7, 3 2 0, S_000001cce9fffdd0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "inputs";
+    .port_info 1 /INPUT 2 "selectbits";
+    .port_info 2 /OUTPUT 1 "answer";
+P_000001cce9ffee40 .param/l "N" 0 3 3, +C4<00000000000000000000000000000100>;
+v000001ccea064820_0 .net "answer", 0 0, L_000001ccea067b50;  alias, 1 drivers
+v000001ccea066e30_0 .net "inputs", 3 0, v000001ccea066610_0;  1 drivers
+v000001ccea068050_0 .net "selectbits", 1 0, v000001ccea0675b0_0;  1 drivers
+L_000001ccea066c50 .part v000001ccea066610_0, 2, 2;
+L_000001ccea068370 .part v000001ccea0675b0_0, 0, 1;
+L_000001ccea067290 .part v000001ccea066610_0, 0, 2;
+L_000001ccea067650 .part v000001ccea0675b0_0, 0, 1;
+L_000001ccea0673d0 .part v000001ccea0675b0_0, 1, 1;
+S_000001ccea009b50 .scope function.vec4.u32, "clog2" "clog2" 3 9, 3 9 0, S_000001ccea0099c0;
+ .timescale 0 0;
+; Variable clog2 is vec4 return value of scope S_000001ccea009b50
+v000001ccea009d80_0 .var/i "temp", 31 0;
+v000001cce9fd2d60_0 .var/i "value", 31 0;
+TD_nBit_mux_recur_tb.uut.clog2 ;
+    %load/vec4 v000001cce9fd2d60_0;
+    %subi 1, 0, 32;
+    %store/vec4 v000001ccea009d80_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %ret/vec4 0, 0, 32;  Assign to clog2 (store_vec4_to_lval)
+T_0.0 ;
+    %load/vec4 v000001ccea009d80_0;
+    %cmpi/s 0, 0, 32;
+    %flag_or 5, 4; GT is !LE
+    %flag_inv 5;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v000001ccea009d80_0;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftr 4;
+    %store/vec4 v000001ccea009d80_0, 0, 32;
+    %retload/vec4 0; Load clog2 (draw_signal_vec4)
+    %addi 1, 0, 32;
+    %ret/vec4 0, 0, 32;  Assign to clog2 (store_vec4_to_lval)
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+S_000001cce9fd2e00 .scope generate, "genblk1" "genblk1" 3 20, 3 20 0, S_000001ccea0099c0;
+ .timescale 0 0;
+v000001ccea064960_0 .net "leftOutput", 0 0, L_000001ccea0680f0;  1 drivers
+v000001ccea064a00_0 .net "rightOutput", 0 0, L_000001ccea067a10;  1 drivers
+S_000001cce9fd2f90 .scope module, "internMux" "twoToOne" 3 27, 3 37 0, S_000001cce9fd2e00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "s";
+    .port_info 1 /INPUT 1 "d0";
+    .port_info 2 /INPUT 1 "d1";
+    .port_info 3 /OUTPUT 1 "answer";
+v000001cce9fd3120_0 .net "answer", 0 0, L_000001ccea067b50;  alias, 1 drivers
+v000001ccea004280_0 .net "d0", 0 0, L_000001ccea067a10;  alias, 1 drivers
+v000001ccea064aa0_0 .net "d1", 0 0, L_000001ccea0680f0;  alias, 1 drivers
+v000001ccea064b40_0 .net "s", 0 0, L_000001ccea0673d0;  1 drivers
+L_000001ccea067b50 .functor MUXZ 1, L_000001ccea067a10, L_000001ccea0680f0, L_000001ccea0673d0, C4<>;
+S_000001ccea004320 .scope module, "muxLeft" "nBit_Mux" 3 25, 3 2 0, S_000001cce9fd2e00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "inputs";
+    .port_info 1 /INPUT 1 "selectbits";
+    .port_info 2 /OUTPUT 1 "answer";
+P_000001cce9ffe900 .param/l "N" 0 3 3, +C4<00000000000000000000000000000010>;
+v000001ccea064c80_0 .net "answer", 0 0, L_000001ccea0680f0;  alias, 1 drivers
+v000001ccea0641e0_0 .net "inputs", 1 0, L_000001ccea066c50;  1 drivers
+v000001ccea064f00_0 .net "selectbits", 0 0, L_000001ccea068370;  1 drivers
+L_000001ccea068190 .part L_000001ccea066c50, 0, 1;
+L_000001ccea067970 .part L_000001ccea066c50, 1, 1;
+S_000001ccea0044b0 .scope function.vec4.u32, "clog2" "clog2" 3 9, 3 9 0, S_000001ccea004320;
+ .timescale 0 0;
+; Variable clog2 is vec4 return value of scope S_000001ccea0044b0
+v000001ccea0648c0_0 .var/i "temp", 31 0;
+v000001ccea064dc0_0 .var/i "value", 31 0;
+TD_nBit_mux_recur_tb.uut.genblk1.muxLeft.clog2 ;
+    %load/vec4 v000001ccea064dc0_0;
+    %subi 1, 0, 32;
+    %store/vec4 v000001ccea0648c0_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %ret/vec4 0, 0, 32;  Assign to clog2 (store_vec4_to_lval)
+T_1.2 ;
+    %load/vec4 v000001ccea0648c0_0;
+    %cmpi/s 0, 0, 32;
+    %flag_or 5, 4; GT is !LE
+    %flag_inv 5;
+    %jmp/0xz T_1.3, 5;
+    %load/vec4 v000001ccea0648c0_0;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftr 4;
+    %store/vec4 v000001ccea0648c0_0, 0, 32;
+    %retload/vec4 0; Load clog2 (draw_signal_vec4)
+    %addi 1, 0, 32;
+    %ret/vec4 0, 0, 32;  Assign to clog2 (store_vec4_to_lval)
+    %jmp T_1.2;
+T_1.3 ;
+    %end;
+S_000001ccea004640 .scope generate, "genblk1" "genblk1" 3 20, 3 20 0, S_000001ccea004320;
+ .timescale 0 0;
+S_000001ccea0047d0 .scope module, "baseMux" "twoToOne" 3 21, 3 37 0, S_000001ccea004640;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "s";
+    .port_info 1 /INPUT 1 "d0";
+    .port_info 2 /INPUT 1 "d1";
+    .port_info 3 /OUTPUT 1 "answer";
+v000001ccea064500_0 .net "answer", 0 0, L_000001ccea0680f0;  alias, 1 drivers
+v000001ccea064e60_0 .net "d0", 0 0, L_000001ccea068190;  1 drivers
+v000001ccea0643c0_0 .net "d1", 0 0, L_000001ccea067970;  1 drivers
+v000001ccea064640_0 .net "s", 0 0, L_000001ccea068370;  alias, 1 drivers
+L_000001ccea0680f0 .functor MUXZ 1, L_000001ccea068190, L_000001ccea067970, L_000001ccea068370, C4<>;
+S_000001ccea004960 .scope module, "muxRight" "nBit_Mux" 3 26, 3 2 0, S_000001cce9fd2e00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "inputs";
+    .port_info 1 /INPUT 1 "selectbits";
+    .port_info 2 /OUTPUT 1 "answer";
+P_000001cce9fff100 .param/l "N" 0 3 3, +C4<00000000000000000000000000000010>;
+v000001ccea0645a0_0 .net "answer", 0 0, L_000001ccea067a10;  alias, 1 drivers
+v000001ccea0646e0_0 .net "inputs", 1 0, L_000001ccea067290;  1 drivers
+v000001ccea064780_0 .net "selectbits", 0 0, L_000001ccea067650;  1 drivers
+L_000001ccea0667f0 .part L_000001ccea067290, 0, 1;
+L_000001ccea067ab0 .part L_000001ccea067290, 1, 1;
+S_000001ccea066070 .scope function.vec4.u32, "clog2" "clog2" 3 9, 3 9 0, S_000001ccea004960;
+ .timescale 0 0;
+; Variable clog2 is vec4 return value of scope S_000001ccea066070
+v000001ccea064be0_0 .var/i "temp", 31 0;
+v000001ccea064fa0_0 .var/i "value", 31 0;
+TD_nBit_mux_recur_tb.uut.genblk1.muxRight.clog2 ;
+    %load/vec4 v000001ccea064fa0_0;
+    %subi 1, 0, 32;
+    %store/vec4 v000001ccea064be0_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %ret/vec4 0, 0, 32;  Assign to clog2 (store_vec4_to_lval)
+T_2.4 ;
+    %load/vec4 v000001ccea064be0_0;
+    %cmpi/s 0, 0, 32;
+    %flag_or 5, 4; GT is !LE
+    %flag_inv 5;
+    %jmp/0xz T_2.5, 5;
+    %load/vec4 v000001ccea064be0_0;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftr 4;
+    %store/vec4 v000001ccea064be0_0, 0, 32;
+    %retload/vec4 0; Load clog2 (draw_signal_vec4)
+    %addi 1, 0, 32;
+    %ret/vec4 0, 0, 32;  Assign to clog2 (store_vec4_to_lval)
+    %jmp T_2.4;
+T_2.5 ;
+    %end;
+S_000001ccea066200 .scope generate, "genblk1" "genblk1" 3 20, 3 20 0, S_000001ccea004960;
+ .timescale 0 0;
+S_000001ccea066390 .scope module, "baseMux" "twoToOne" 3 21, 3 37 0, S_000001ccea066200;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "s";
+    .port_info 1 /INPUT 1 "d0";
+    .port_info 2 /INPUT 1 "d1";
+    .port_info 3 /OUTPUT 1 "answer";
+v000001ccea064280_0 .net "answer", 0 0, L_000001ccea067a10;  alias, 1 drivers
+v000001ccea064140_0 .net "d0", 0 0, L_000001ccea0667f0;  1 drivers
+v000001ccea064320_0 .net "d1", 0 0, L_000001ccea067ab0;  1 drivers
+v000001ccea064460_0 .net "s", 0 0, L_000001ccea067650;  alias, 1 drivers
+L_000001ccea067a10 .functor MUXZ 1, L_000001ccea0667f0, L_000001ccea067ab0, L_000001ccea067650, C4<>;
+    .scope S_000001cce9fffdd0;
+T_3 ;
+    %vpi_call 2 9 "$dumpfile", "nBit_mux_recur_tb.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001cce9fffdd0 {0 0 0};
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 11, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 13, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v000001ccea066610_0, 0, 4;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v000001ccea0675b0_0, 0, 2;
+    %delay 20, 0;
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "nBit_mux_recur_tb.v";
+    "./nBit_mux_recur.v";
