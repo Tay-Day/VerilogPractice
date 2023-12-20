@@ -1,6 +1,6 @@
 
 module nBit_Mux#(
-    parameter N = 4
+    parameter N = 16
 )(
     input [N-1:0] inputs,
     input [$clog2(N)-1:0] selectbits,
